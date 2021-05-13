@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Initialising Page Title -->
+    <head>
+        <meta charset="UTF-8">
+        <title>KFC Landing Page</title>
+        <link rel="stylesheet" href="css/style.css">
+        
+    </head>
+
+    <body>
+        <section>
+            <div class="circle">
+            </div>
+            <!-- Creating Header with Logo & Page List -->
+            <header>
+                <a href="#" class="kfc_logo"><img src="assets/kfc_logo_1.png"></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Place Order</a></li>
+                    <li><a href="#">Discounts</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Its not just a Smoothie!<br>It's <span>Krushers</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat dui in sagittis congue. Aenean iaculis id tellus a vehicula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat dui in sagittis congue. Aenean iaculis id tellus a vehicula.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="imageBox">
+                    <img src="assets/Krushers_Sparkles_large.png" class="krushers">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="assets/Krushers_Sparkles.png" onclick="imageSlider('assets/Krushers_Sparkles_large.png');changeCircleColour('#019e5d')"></li>
+                <li><img src="assets/Strawberry-smoothie.png" onclick="imageSlider('assets/Strawberry-smoothie-large.png');changeCircleColour('#F37D84')"></li>
+                <li><img src="assets/Krushers_lash.png" onclick="imageSlider('assets/Krushers_lash_large.png');changeCircleColour('#CA9E7B')"></li>
+                <li><img src="assets/Krushers_Smoothie.png" onclick="imageSlider('assets/Krushers_Smoothie_large.png');changeCircleColour('#f1cf1a')"></li>
+            </ul>
+            <ul class="socials">
+                <li><a href="#"><img src="assets/facebook.png"></a></li>
+                <li><a href="#"><img src="assets/instagram.png"></a></li>
+                <li><a href="#"><img src="assets/twitter.png"></a></li>
+            </ul>
+        </section>
+
+        <script type="text/javascript">
+            function imageSlider(anyImage){
+                document.querySelector('.krushers').src = anyImage;
+            }
+
+            function changeCircleColour(colour){
+                const circle = document.querySelector('.circle');
+                circle.style.background = colour;
+            }
+        </script>
+    </body>
+</html>
